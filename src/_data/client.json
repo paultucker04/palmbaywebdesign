@@ -1,0 +1,14 @@
+{
+	"name": "Peaceful Spas",
+	"email": "peacefulspas@gmail.com",
+	"phoneForTel": "772-341-1128",
+	"phoneFormatted": "(772) 341-1128",
+	"address": {
+		"lineOne": "2605 Malabar Road",
+		"city": "Malabar",
+		"state": "FL",
+		"zip": "32950",
+		"mapLink": "https://goo.gl/maps/mGgdirJZjgaYanGZ7"
+	},
+	"domain": "www.codestitch.app"
+}
