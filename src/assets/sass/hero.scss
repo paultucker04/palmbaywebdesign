@@ -1,0 +1,551 @@
+/* STYLES FOR ABOVE THE FOLD */
+
+/*-- -------------------------- -->
+/*-- -------------------------- -->
+<---            Hero            -->
+<--- -------------------------- -*/
+
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+	#hero-856 {
+		/* remove the font family so the Stitch inherits the fonts from your global stylesheet */
+		font-family: 'Roboto', 'Arial', sans-serif;
+		/* centers button */
+		text-align: center;
+		/* 116px - 164px top */
+		/* 60px - 100px  bottom */
+		padding: clamp(7.25rem, 16.82vw, 10.25rem) calc(16 / 16 * 1rem) 0px;
+		background-image: linear-gradient(#B0E1D6E3, #BBD9D28F, #C6D1CE32, #CCCCCC00);
+		// background-color: rgb(235, 235, 235);
+		/* clips the svg wave from overflowing */
+		overflow: hidden;
+		position: relative;
+		z-index: 1;
+
+		.cs-container {
+			width: 100%;
+			max-width: calc(1280 / 16 * 1rem);
+			margin: auto;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-direction: column;
+			gap: calc(48 / 16 * 1rem);
+		}
+
+		.cs-content {
+			max-width: calc(630 / 16 * 1rem);
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-direction: column;
+		}
+
+		.cs-topper {
+			font-size: calc(16 / 16 * 1rem);
+			line-height: 1.2em;
+			text-transform: uppercase;
+			text-align: inherit;
+			letter-spacing: 0.1em;
+			font-weight: 700;
+			color: var(--primary);
+			margin-bottom: calc(4 / 16 * 1rem);
+			display: block;
+		}
+
+		.cs-title {
+			/* 39px - 61px */
+			font-size: clamp(2.4375rem, 5vw, 3.8125rem);
+			font-weight: 900;
+			line-height: 1.2em;
+			text-align: center;
+			/* 23 characters including spaces wide */
+			max-width: 23ch;
+			margin: 0 auto calc(16 / 16 * 1rem) 0;
+			color: var(--headerColor);
+			position: relative;
+		}
+
+		.cs-text {
+			/* 16px - 20px */
+			font-size: clamp(1rem, 1.5vw, 1.25rem);
+			line-height: 1.5em;
+			text-align: center;
+			width: 100%;
+			max-width: calc(531 / 16 * 1rem);
+			/* 28px - 40px */
+			margin: 0 0 clamp(1.75rem, 3.92vw, 2.5rem) 0;
+			color: var(--bodyTextColor);
+		}
+
+		.cs-picture {
+			width: 100%;
+			// max-width: calc(570 / 16 * 1rem);
+			/* 400px - 712px */
+			// height: clamp(25rem, 95vw, 44.5rem);
+			/* 100px - 200px */
+			// border-radius: 0 clamp(6.25rem, 17vw, 12.5rem) 0 clamp(6.25rem, 17vw, 12.5rem);
+			// box-shadow: 0px 4px 60px rgba(0, 0, 0, 0.16);
+			/* clips the img tag corners */
+			overflow: hidden;
+			display: block;
+			position: relative;
+
+			img {
+				position: absolute;
+				top: 0;
+				left: 0;
+				height: 100%;
+				width: 100%;
+				/* makes image act as a background image */
+				object-fit: cover;
+				/* ensures the top of the images is at the top of the container, no heads getting cut off */
+				object-position: top;
+			}
+		}
+
+		.cs-wave {
+			/* we're stretching the svg wider than the viewport so it's taller and has more of a presence */
+			width: 320%;
+			height: auto;
+			display: block;
+			position: absolute;
+			left: 50%;
+			bottom: 0;
+			transform: translateX(-50%);
+			z-index: -1;
+		}
+	}
+}
+
+/* Small Desktop - 1024px */
+@media only screen and (min-width: 64rem) {
+	#hero-856 {
+		text-align: left;
+		.cs-container {
+			flex-direction: row;
+			justify-content: space-between;
+		}
+
+		.cs-content {
+			width: 40vw;
+			/* prevents flex-box from squishing it */
+			flex: none;
+			align-items: flex-start;
+			/* sends it to the right in the 2nd position */
+			order: 2;
+		}
+
+		.cs-title,
+		.cs-text {
+			text-align: left;
+		}
+
+		.cs-picture {
+			/* 623px - 814px */
+			height: clamp(38.9375rem, 60vw, 50.875rem);
+		}
+
+		.cs-wave {
+			width: 100%;
+			left: 0;
+			/* flips it horizontally */
+			transform: scaleX(-1);
+		}
+	}
+}
+
+/*-- -------------------------- -->
+<---          Services          -->
+<--- -------------------------- -*/
+
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+	#services-690 {
+		/* remove the font family so the Stitch inherits the fonts from your global stylesheet */
+		font-family: 'Roboto', 'Arial', sans-serif;
+		padding: var(--sectionPadding);
+
+		.cs-container {
+			width: 100%;
+            /* changes to 1280px at tablet */
+			max-width: calc(550 / 16 * 1rem);
+			margin: auto;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			/* 48px - 64px */
+			gap: clamp(3rem, 6vw, 4rem);
+		}
+
+		.cs-content {
+			/* set text align to left if content needs to be left aligned */
+			text-align: left;
+			width: 100%;
+			display: flex;
+			flex-direction: column;
+			/* centers content horizontally, set to flex-start to left align */
+			align-items: flex-start;
+		}
+
+		.cs-flex-group {
+			/* prevents flexbox from squishing it */
+			flex: none;
+		}
+
+		.cs-topper {
+			font-size: var(--topperFontSize);
+			line-height: 1.2em;
+			text-transform: uppercase;
+			text-align: inherit;
+			letter-spacing: 0.1em;
+			font-weight: 700;
+			color: var(--primary);
+			margin-bottom: calc(4 / 16 * 1rem);
+			display: block;
+		}
+
+		.cs-title {
+			font-size: var(--headerFontSize);
+			font-weight: 900;
+			line-height: 1.2em;
+			text-align: inherit;
+			max-width: calc(700 / 16 * 1rem);
+			margin: 0 0 calc(16 / 16 * 1rem) 0;
+			color: var(--headerColor);
+			position: relative;
+		}
+
+		.cs-color {
+			color: var(--primary);
+		}
+
+		.cs-text {
+			font-size: var(--bodyFontSize);
+			line-height: 1.5em;
+			text-align: inherit;
+			width: 100%;
+			max-width: calc(650 / 16 * 1rem);
+			margin: 0;
+			color: var(--bodyTextColor);
+		}
+
+		.cs-card-group {
+			width: 100%;
+			margin: 0;
+			padding: 0;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-wrap: wrap;
+			flex-direction: column;
+			row-gap: calc(16 / 16 * 1rem);
+		}
+
+		.cs-item {
+			list-style: none;
+			width: 100%;
+			/* 24px - 40px top & bottom */
+			padding: clamp(1.25rem, 4vw, 2.5rem) calc(24 / 16 * 1rem);
+			background-color: #D3D1D1;
+			;
+			box-sizing: border-box;
+		}
+
+		.cs-link {
+			text-decoration: none;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-direction: column;
+		}
+
+		.cs-picture {
+			width: calc(64 / 16 * 1rem);
+			height: calc(64 / 16 * 1rem);
+			margin: 0;
+			margin-bottom: calc(24 / 16 * 1rem);
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			border-radius: 50%;
+			background-color: #fff;
+			box-shadow: 0px 12px 30px rgba(26, 26, 26, 0.04);
+			position: relative;
+			z-index: 1;
+		}
+
+		.cs-icon {
+			height: calc(32 / 16 * 1rem);
+			width: auto;
+		}
+
+		.cs-h3 {
+			font-size: calc(20 / 16 * 1rem);
+			font-weight: 900;
+			text-align: center;
+			line-height: 1.2em;
+			margin: 0;
+			margin-bottom: calc(12 / 16 * 1rem);
+			color: var(--headerColor);
+			transition: color 0.3s;
+		}
+
+		.cs-item-text {
+			/* 14px - 16px */
+			font-size: clamp(0.875rem, 1.5vw, 1rem);
+			text-align: center;
+			line-height: 1.5em;
+			margin: 0;
+			color: var(--bodyTextColor);
+			transition: color 0.3s;
+		}
+	}
+}
+
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+	#services-690 {
+        .cs-container {
+            max-width: calc(1280 / 16 * 1rem);
+        }
+
+		.cs-content {
+			flex-direction: row;
+			justify-content: space-between;
+			align-items: center;
+            gap: calc(48 / 16 * 1rem);
+		}
+
+        .cs-flex-group {
+            width: 50%;
+        }
+
+		.cs-card-group {
+			/* pushes down the same amount the 2nd cards are translated down to maintain the even spacing at the bottom of the cs-card-group */
+			margin-bottom: calc(40 / 16 * 1rem);
+			flex-direction: row;
+			justify-content: center;
+			flex-wrap: wrap;
+			column-gap: calc(20 / 16 * 1rem);
+		}
+
+		.cs-item {
+			width: 30vw;
+			max-width: calc(413 / 16 * 1rem);
+			&:nth-of-type(2) {
+				transform: translateY(calc(40 / 16 * 1rem));
+				background-color: var(--navColor);
+			}
+		}
+	}
+}
+                                
+         /*-- -------------------------- -->
+<---          Pricing           -->
+<--- -------------------------- -*/
+
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+    #pricing-701 {
+        /* remove the font family so the Stitch inherits the fonts from your global stylesheet */
+        font-family: 'Roboto', 'Arial', sans-serif;
+        padding: var(--sectionPadding);
+        background-color: #f7f8f8;
+
+        .cs-container {
+            width: 100%;
+            max-width: calc(1280 / 16 * 1em);
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            /* 48px - 64px */
+            gap: clamp(3rem, 6vw, 4rem);
+            position: relative;
+        }
+
+        .cs-content {
+            /* set text align to left if content needs to be left aligned */
+            text-align: center;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            /* centers content horizontally, set to flex-start to left align */
+            align-items: center;
+        }
+
+        .cs-topper {
+            font-size: var(--topperFontSize);
+            line-height: 1.2em;
+            text-transform: uppercase;
+            text-align: inherit;
+            letter-spacing: 0.1em;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: calc(4 / 16 * 1rem);
+            display: block;
+        }
+
+        .cs-title {
+            font-size: var(--headerFontSize);
+            font-weight: 900;
+            line-height: 1.2em;
+            text-align: inherit;
+            /* 20 characters wide including spaces */
+            max-width: 20ch;
+            margin: 0 0 calc(16 / 16 * 1rem) 0;
+            color: var(--headerColor);
+            position: relative;
+        }
+
+        .cs-text {
+            font-size: var(--bodyFontSize);
+            line-height: 1.5em;
+            text-align: inherit;
+            width: 100%;
+            max-width: calc(650 / 16 * 1rem);
+            margin: 0;
+            color: var(--bodyTextColor);
+        }
+
+        .cs-card-group {
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            /* 16px - 20px */
+            gap: clamp(1rem, 1.8vw, 1.25rem);
+            perspective: 700px;
+            transform-style: preserve-3d;
+        }
+
+        .cs-item {
+            list-style: none;
+            width: 100%;
+            max-width: calc(500 / 16 * 1rem);
+            margin: 0;
+            /* 20px - 40px top *
+            /* 16px - 32px left & right */
+            padding: clamp(1.25rem, 3vw, 2.5rem) clamp(1rem, 3vw, 2rem);
+            background-color: #fff;
+            /* prevents padding from affecting height and width */
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            align-items: stretch;
+
+            &.cs-popular {
+                background-color: var(--navColor);
+            }
+        }
+
+        .cs-package {
+            /* 13px - 16px */
+            font-size: clamp(0.8125rem, 1.4vw, 1rem);
+            line-height: 1.2em;
+            text-align: center;
+            text-transform: uppercase;
+            font-weight: 700;
+            margin: 0 0 calc(8 / 16 * 1rem) 0;
+            color: #767676;
+            display: block;
+        }
+
+        .cs-price {
+            /* 31px - 49px */
+            font-size: var(--headerFontSize);
+            line-height: 1.2em;
+            text-align: center;
+            font-weight: 900;
+            margin: 0;
+            color: var(--headerColor);
+        }
+
+        .cs-desc {
+            /* 14px - 16px */
+            font-size: clamp(0.875rem, 1.5vw, 1rem);
+            line-height: 1.2em;
+            text-align: center;
+            margin: 0 0 calc(8 / 16 * 1rem) 0;
+            color: var(--bodyTextColor);
+            opacity: 0.8;
+        }
+
+        .cs-item-p {
+            font-size: calc(16 / 16 * 1rem);
+            line-height: 1.5em;
+            text-align: center;
+            font-weight: 400;
+            margin: 0;
+            color: var(--bodyTextColor);
+        }
+
+        .cs-ul {
+            /* 32px - 48px */
+            margin: calc(24 / 16 * 1rem) 0;
+            padding: calc(24 / 16 * 1rem) 0 0 0;
+            border-top: 1px solid #eff1f0;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: calc(12 / 16 * 1rem);
+        }
+
+        .cs-li {
+            /* 14px - 16px */
+            font-size: clamp(0.875rem, 1.5vw, 1rem);
+            list-style: none;
+            line-height: 1.2em;
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            color: var(--bodyTextColor);
+            display: flex;
+            justify-content: space-between;
+            /* push everything to the top so if the li goes to two lines the icon stays at the top */
+            align-items: flex-start;
+            gap: calc(16 / 16 * 1rem);
+
+            &.cs-disabled {
+                opacity: 0.5;
+            }
+        }
+
+        .cs-icon {
+            width: calc(18 / 16 * 1rem);
+            height: auto;
+            display: block;
+        }
+
+
+        .cs-price-button {
+            /* pushes up against the cs-ul so if there's loess li's in the list, the button always pushes itself to the bottom */
+            margin-top: auto;
+            width: 100%;
+            border-radius: 0;
+            &:before {
+                border-radius: 0;
+            }
+        }
+    }
+}
+
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+    #pricing-701 {
+        .cs-card-group {
+            flex-direction: row;
+            justify-content: center;
+            align-items: stretch;
+        }
+
+        .cs-option2 {
+            top: auto;
+            bottom: 0;
+        }
+    }
+}
+                                                       
